@@ -84,6 +84,10 @@
         "NUCLEO_F303RE": {
             "kvstore-size": "2*24*1024",
             "update-client.storage-page": 1
+        },
+        "NRF52840_DK": {
+            "kvstore-size": "2*24*1024",
+            "update-client.storage-page": 1
         }
     }
 }

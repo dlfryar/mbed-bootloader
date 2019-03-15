@@ -40,7 +40,7 @@
     },
     "macros": [
         "ARM_UC_USE_PAL_BLOCKDEVICE=1",
-        "MBED_CLOUD_CLIENT_UPDATE_STORAGE=ARM_UCP_FLASHIAP_BLOCKDEVICE",
+        "MBED_CLOUD_CLIENT_UPDATE_STORAGE=ARM_UCP_FLASHIAP",
         "MBED_BOOTLOADER_SIZE=(32*1024)",
         "MBED_BOOTLOADER_ACTIVE_HEADER_REGION_SIZE=1024"
     ],
@@ -53,8 +53,6 @@
             "update-client.storage-size"               : "((MBED_ROM_START + MBED_ROM_SIZE - MBED_CONF_MBED_BOOTLOADER_APPLICATION_START_ADDRESS) * MBED_CONF_UPDATE_CLIENT_STORAGE_LOCATIONS)",
             "update-client.storage-locations"          : 1,
             "update-client.firmware-header-version"    : "2",
-            "target.components_add"                    : ["SD"],
-            "sd.CRC_ENABLED"                           : 0,
             "storage.storage_type"                     : "FILESYSTEM",
             "storage_filesystem.internal_base_address" : "(MBED_ROM_START + MBED_BOOTLOADER_SIZE)",
             "update-client.application-details"        : "(MBED_CONF_STORAGE_FILESYSTEM_INTERNAL_BASE_ADDRESS + MBED_CONF_STORAGE_FILESYSTEM_RBP_INTERNAL_SIZE)",
@@ -119,10 +117,6 @@
             "update-client.storage-size"               : "(1024*1024*1)",
             "update-client.storage-locations"          : 1,
             "update-client.storage-page"               : 1,
-            "sd.SPI_CS"                                : "A0",
-            "sd.SPI_MOSI"                              : "A1",
-            "sd.SPI_MISO"                              : "A2",
-            "sd.SPI_CLK"                               : "A3",
             "target.features_remove"                   : ["CRYPTOCELL310"],
             "target.macros_remove"                     : ["MBEDTLS_CONFIG_HW_SUPPORT"]
         }
