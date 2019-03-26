@@ -1,3 +1,4 @@
+mbed-os/usb/*
 */test/*
 mbed-os/rtos/*
 mbed-os/events/*

@@ -29,7 +29,7 @@
         },
         "use-kvstore-rot": {
             "help": "use nvstore implementation of the ROT to authenticate firmware headers",
-            "value": 0,
+            "value": 1,
             "macro_name": "ARM_BOOTLOADER_USE_KVSTORE_ROT"
         }
     },
